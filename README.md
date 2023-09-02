@@ -1,6 +1,6 @@
 # Video Anomaly Detection 属于感知任务，还是认知任务？
 ***
-> Topics: ** Dataset、Taxonomy、Time、Reproduction..... **
+> Topics: **Dataset、Taxonomy、Time、Reproduction.....**
 
 ## Open Challenges and Opportunities
 * 视频异常检测的“实时性”是否经得住推敲？**即时性异常**：跑步、异常物体的出现……**非即时性异常**：游荡……**认知型异常（存在因果）**：人出现在公路上，不能够作为判别异常的根据，若人是从人行道走到公路去开车，或刚从公路上的车里下来，然后走到人行道，那么这就属于正常事件；如果，这人不遵守交通规则横穿了马路，这那么这就属于异常事件——见Street Scene数据集。
