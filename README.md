@@ -1,4 +1,4 @@
-#Video Anomaly Detection 属于感知任务，还是认知任务？
+# Video Anomaly Detection 属于感知任务，还是认知任务？
 ***
 > Topics: **Dataset、Taxonomy、Time、Reproduction.....**
 
