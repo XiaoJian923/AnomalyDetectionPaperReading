@@ -1,8 +1,8 @@
 # Video Anomaly Detection 属于感知任务，还是认知任务？
 ***
-> Topics: **Dataset、Taxonomy、Time、Reproduction.....**
+> Topics: ** Dataset、Taxonomy、Time、Reproduction..... **
 
-##Open Challenges and Opportunities
+## Open Challenges and Opportunities
 * 视频异常检测的“实时性”是否经得住推敲？**即时性异常**：跑步、异常物体的出现……**非即时性异常**：游荡……**认知型异常（存在因果）**：人出现在公路上，不能够作为判别异常的根据，若人是从人行道走到公路去开车，或刚从公路上的车里下来，然后走到人行道，那么这就属于正常事件；如果，这人不遵守交通规则横穿了马路，这那么这就属于异常事件——见Street Scene数据集。
 * 异常具有场景依赖性，所以模型首先要理解场景，对场景进行建模。
 * 对场景的切实理解、语义理解、语义解释；很多方法没有理解场景
@@ -34,7 +34,7 @@
 * **双流对抗系列**，伪异常双流+纯正常双流+试验充分+发CCF C绝对没问题！！！
 * 
 
-##Next Direction
+## Next Direction
 * **Pseudo-sample** 伪异常一定要加，负采样会使模型学到的分布更加紧凑
 * **聚类** 
 * **异常稀有性** 用于彻底无监督和弱监督（这两种问题设置本质相通），利用统计信息做伪标签的初步判定
@@ -42,19 +42,19 @@
 * **Energy-based Out-of-distribution Detection** 分布外检测 分类中：softmax->one-vs-rest->EBM->
 * 
 
-##Taxonomy
+## Taxonomy
 * 从监督信号进行分类
 * 在线离线
 * 是否关注全局，即是否提取前景目标 
 * **point anomalies**通过分析单个数据的值即可识别，例如，观察到不被期望的物体。**contextual(conditional) anomalies**除值之外，还需要环境信息，例如，车在人行道是异常，在公路上是正常。**collective(group)anomalies**大量的数据实例组成异常，例如，银行有几个人是正常，但有几百人是异常。条件异常有更广泛的定义，可以包含其它两种类型，因此，推荐将视频异常视作条件异常。
 
 
-##Survey
+## Survey
 * [A Critical Study on the Recent Deep Learning Based Semi-Supervised Video Anomaly Detection Methods](./Survey/A%20Critical%20Study%20on%20the%20Recent%20Deep%20Learning%20Based%20Semi-Supervised%20Video%20Anomaly%20Detection%20Methods.pdf)`arXiv2021`
 
 
 
-##Dataset
+## Dataset
 * UCSD Ped1
 * UCSD Ped2
 * CUHK Avenue
@@ -67,32 +67,32 @@
 * UCF-Crime
 >Note：半监督与弱监督所用的数据集名称相同，但数据集内容的具体划分不同，所以它们之间没有可比性。
 
-##Annotation
+## Annotation
 * 像素级标注：
 * 帧级标注
 * 视频级标注
 * Bbox标注
 * 异常种类标注
 
-##Evaluation  Criterion
+## Evaluation  Criterion
 * Micro-AUC
 * Macro-AUC
 * EER（Equal Error Rate）
 * TBDR（Track-Based Detection Rate）
 * RBDR（Region-Based Detection Rate）
 
-##Supervised
+## Supervised
 
 
 
-##Weakly Supervised
+## Weakly Supervised
 
 
-##Semi-Supervised
+## Semi-Supervised
 单分类问题，但有多个正常子类  
 1.Comprehensive Regularization in a Bi-directional Predictive Network for Video Anomaly Detection`AAAI2022`
 
-##Unsupervised
+## Unsupervised
 “级联分类”（两种视角）  
 第一种视角：是否承接弱监督，若是，则用去掉视频级标注的训练集进行训练，用测试集进行测试；若否，则没有训练集，直接测试集  
 第二种视角：**Partial mode**：直接上测试集，丢弃训练集 **Merge mode**：将训练集与测试集混合之后用于无监督视频异常检测
@@ -104,14 +104,14 @@
 6. Deep Anomaly Discovery from Unlabeled Videos via Normality Advantage and Self-Paced Refinement`CVPR2022`
 
 
-##说法
+## 说法
 * 由于ShanghaiTech数据集比UCSD数据集拥有更高的像素，所以它更容易通过表观特征来识别异常物体
 * Street Scene数据集最具有挑战性，异常高度依赖于环境
 
 
 
 
-##话术
+## 话术
 异常事件包含大量信息
 
 
